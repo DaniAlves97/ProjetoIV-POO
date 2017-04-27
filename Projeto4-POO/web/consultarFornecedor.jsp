@@ -4,8 +4,8 @@
     Author     : Daniel
 --%>
 
-<%@page import="programaweb.BancoFornecedor"%>
-<%@page import="programaweb.Fornecedor"%>
+<%@page import="br.com.fatecpg.projeto.DatabaseFornecedor"%>
+<%@page import="br.com.fatecpg.projeto.Fornecedor"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
@@ -91,9 +91,9 @@
 
 
 
-                                <% for (String key : BancoFornecedor.getFornecedor().keySet()) { %>
+                                <% for (String key : DatabaseFornecedor.getFornecedor() .keySet()) { %>
                                 <tr>
-                                    <% Fornecedor f = BancoFornecedor.getFornecedor().get(key);%>
+                                    <% Fornecedor f = DatabaseFornecedor.getFornecedor().get(key);%>
 
 
                                     <td><%= f.getNome()%></td>

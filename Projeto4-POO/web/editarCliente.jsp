@@ -4,7 +4,7 @@
     Author     : Daniel
 --%>
 
-<%@page import="programaweb.Cliente"%>
+<%@page import="br.com.fatecpg.projeto.Cliente"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <% String nome = request.getParameter("nome");
     String cpf = request.getParameter("cpf");

@@ -4,8 +4,9 @@
     Author     : Daniel
 --%>
 
-<%@page import="programaweb.BancoCliente"%>
-<%@page import="programaweb.Cliente"%>
+<%@page import="br.com.fatecpg.projeto.Database"%>
+<%@page import="br.com.fatecpg.projeto.DatabaseFornecedor"%>
+<%@page import="br.com.fatecpg.projeto.Cliente"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
@@ -141,9 +142,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <% for (String key : BancoCliente.getCliente().keySet()) { %>
+                                    <% for (String key : Database.getCliente().keySet()) { %>
                                     <tr>
-                                    <% Cliente c = BancoCliente.getCliente().get(key);%>
+                                    <% Cliente c = Database.getCliente().get(key);%>
                                         <td><%= c.getNome()%></td>
                                         <td><%= c.getCpf()%></td><!-- /COLOCAR O ID -->
                                         <td><%= c.getRg()%></td><!-- /COLOCAR O RG -->
