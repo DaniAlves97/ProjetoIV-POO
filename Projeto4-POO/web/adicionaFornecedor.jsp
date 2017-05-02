@@ -10,17 +10,9 @@
         String email = request.getParameter("email");
         String fone = request.getParameter("fone");
         String endereco = request.getParameter("endereco");
-
         Fornecedor f = new Fornecedor(nome, razaoSocial, cnpj, email, fone, endereco);
-
         f.gravar();
-    } else if (request.getParameter("excluir") != null) {
-        String cnpj = request.getParameter("cnpj");
-        Fornecedor.excluir(cnpj);
-
     }
-
-
 %>
 
 <!DOCTYPE html>
