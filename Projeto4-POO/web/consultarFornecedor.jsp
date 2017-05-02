@@ -5,18 +5,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
-    if (request.getParameter("incluir") != null) {
-        String nome = request.getParameter("nome");
-        String razaoSocial = request.getParameter("razao");
-        String cnpj = request.getParameter("cnpj");
-        String email = request.getParameter("email");
-        String fone = request.getParameter("fone");
-        String endereco = request.getParameter("endereco");
-
-        Fornecedor f = new Fornecedor(nome, razaoSocial, cnpj, email, fone, endereco);
-
-        f.gravar();
-    } else if (request.getParameter("excluir") != null) {
+    if (request.getParameter("excluir") != null) {
         String cnpj = request.getParameter("cnpj");
         Fornecedor.excluir(cnpj);
 
@@ -43,10 +32,10 @@
         <title>Consultar Fornecedor</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
     </head>
     <body> 
-        
+
         <br/>
         <div > <br/><br/>
             <div >
@@ -57,7 +46,7 @@
 
 
                 <div >
-                      <a href="index.html" >Home</a>
+                    <a href="index.html" >Home</a>
                     <a href="adicionaFornecedor.jsp">Novo Fornecedor</a>
                 </div>
 
@@ -87,7 +76,7 @@
 
 
 
-                                <% for (String key : DatabaseFornecedor.getFornecedor() .keySet()) { %>
+                                <% for (String key : DatabaseFornecedor.getFornecedor().keySet()) { %>
                                 <tr>
                                     <% Fornecedor f = DatabaseFornecedor.getFornecedor().get(key);%>
 
@@ -98,30 +87,30 @@
                                     <td><%= f.getEmail()%></td>
                                     <td><%= f.getTelefone()%></td>
                                     <td><%= f.getEndereco()%></td>
-                                    
+
                                     <td >
-                                        
-                            <form method="POST"> 
-                                   <input type="hidden" name="cnpj" value="<%= f.getCnpj()%>"/>
-                                    <input type="submit" name="excluir" value="Excluir"/>
-                            </form>  
-                           
-                            <form action="editarFornecedor.jsp">
-                                <input type="hidden" name="nome" value="<%= f.getNome()%>"      /> 
-                                <input type="hidden" name="razao" value="<%= f.getRazaosocial()%>"      /> 
-                                <input type="hidden" name="cnpj" value="<%= f.getCnpj()%>"      /> 
-                                <input type="hidden" name="email" value="<%= f.getEmail()%>"      /> 
-                                <input type="hidden" name="fone" value="<%= f.getTelefone()%>"      /> 
-                                <input type="hidden" name="endereco" value="<%= f.getEndereco()%>"      /> 
-                                <input type="submit" name="editar" href="editarFornecedor.jsp" value="Editar" />
 
-                            </form>
+                                        <form method="POST"> 
+                                            <input type="hidden" name="cnpj" value="<%= f.getCnpj()%>"/>
+                                            <input type="submit" name="excluir" value="Excluir"/>
+                                        </form>  
 
-                            </td>
+                                        <form action="editarFornecedor.jsp">
+                                            <input type="hidden" name="nome" value="<%= f.getNome()%>"      /> 
+                                            <input type="hidden" name="razao" value="<%= f.getRazaosocial()%>"      /> 
+                                            <input type="hidden" name="cnpj" value="<%= f.getCnpj()%>"      /> 
+                                            <input type="hidden" name="email" value="<%= f.getEmail()%>"      /> 
+                                            <input type="hidden" name="fone" value="<%= f.getTelefone()%>"      /> 
+                                            <input type="hidden" name="endereco" value="<%= f.getEndereco()%>"      /> 
+                                            <input type="submit" name="editar" href="editarFornecedor.jsp" value="Editar" />
+
+                                        </form>
+
+                                    </td>
 
 
-                            </tr>
-                            <% }%>
+                                </tr>
+                                <% }%>
                             </tbody>
                         </table>
 
