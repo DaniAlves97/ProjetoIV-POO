@@ -1,8 +1,3 @@
-<%-- 
-    Document   : adicionaFornecedor
-    Created on : 26/04/2017, 22:30:58
-    Author     : Daniel
---%>
 
 <%@page import="br.com.fatecpg.projeto.Fornecedor"%>
 

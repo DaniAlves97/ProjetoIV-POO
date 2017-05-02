@@ -1,8 +1,4 @@
-<%-- 
-    Document   : fornecedor
-    Created on : 26/04/2017, 22:27:25
-    Author     : Daniel
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

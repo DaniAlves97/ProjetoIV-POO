@@ -1,8 +1,4 @@
-<%-- 
-    Document   : editarFornecedor
-    Created on : 26/04/2017, 22:33:21
-    Author     : Daniel
---%>
+
 
 <%@page import="br.com.fatecpg.projeto.Fornecedor"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

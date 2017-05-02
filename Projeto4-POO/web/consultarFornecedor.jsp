@@ -1,8 +1,4 @@
-<%-- 
-    Document   : consultarFornecedor
-    Created on : 26/04/2017, 22:29:15
-    Author     : Daniel
---%>
+
 
 <%@page import="br.com.fatecpg.projeto.DatabaseFornecedor"%>
 <%@page import="br.com.fatecpg.projeto.Fornecedor"%>
