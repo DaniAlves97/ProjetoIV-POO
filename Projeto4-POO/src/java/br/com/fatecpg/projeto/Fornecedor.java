@@ -73,8 +73,8 @@ public class Fornecedor {
         DatabaseFornecedor.getFornecedor().put(getCnpj(), this);
     }
 
-    public static void editar(String cpf, Fornecedor c) {
-        DatabaseFornecedor.getFornecedor().replace(cpf, c);
+    public static void editar(String cnpj, Fornecedor c) {
+        DatabaseFornecedor.getFornecedor().replace(cnpj, c);
     }
 
     public static void excluir(String cnpj) {
