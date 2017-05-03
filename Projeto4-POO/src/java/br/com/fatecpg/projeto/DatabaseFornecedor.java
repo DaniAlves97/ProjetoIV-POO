@@ -8,11 +8,11 @@ public class DatabaseFornecedor {
     public static HashMap<String, Fornecedor> getFornecedor() {
         if (fornecedores == null) {
             fornecedores = new HashMap<>();
-            Fornecedor f1 = new Fornecedor("FATEC", "FATEC", "11.111.111/0001-11", "fatec@fatec.com", "111111111", "Av.FATEC");
+            Fornecedor f1 = new Fornecedor("LACTA", "LACTA", "11.111.111/0001-11", "lacta@gmail.com", "111111111", "Av. Presidente euviro");
             fornecedores.put(f1.getCnpj(), f1);
-            f1 = new Fornecedor("ETEC", "ETEC", "22.222.222/0002-22", "etec@etec.com", "222222222", "Av.ETEC");
+            f1 = new Fornecedor("C&C", "C&C", "22.222.222/0002-22", "cec@yahoo.com.br", "222222222", "Av. Marechal mallet");
             fornecedores.put(f1.getCnpj(), f1);
-            f1 = new Fornecedor("POO", "POO", "33.333.333/0003-33", "poo@poo.com", "111111111", "Av.POO");
+            f1 = new Fornecedor("Samsung", "Samsung", "33.333.333/0003-33", "samsung@hotmail.com", "111111111", "Rua Augusta");
             fornecedores.put(f1.getCnpj(), f1);
         }
 
